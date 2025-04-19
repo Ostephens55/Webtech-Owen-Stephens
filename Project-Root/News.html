@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" id="LightTheme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+<body>
+    
+  <div class="nav-bar">Owen's Total News Feed</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="homepage.html">Home</a></li>
+    <li id="onpage"><a href="News.html">News</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Submit-Tip.html">Submit a Tip</a></li>
+  </ul>
+  <div id="toggle-theme"><button>Switch to Dark Theme</button></div>
+
+<h1>News By Category</h1>
+
+  <div class="NewsDiv">
+    <div>World</div>
+    <div>Local</div>
+    <div>Culture</div>
+    <div>Science</div>
+    <div>Technology</div>
+    <div>Business</div>
+  </div>
+
+    <p>  Can't Find What You're Looking For?
+        <br>Click below to leave a suggestion!</p>
+    <div class="morenewsdiv">
+      <div class="morenewsbutton"><a href="Submit-Tip.html">Click Here</a></div>
+    </div>
+
+  <script>
+    const toggleButton = document.getElementById('toggle-theme');
+    const themeWrapper = document.getElementById('LightTheme') || document.getElementById('DarkTheme');
+  
+    toggleButton.addEventListener('click', () => {
+      if (themeWrapper.id === 'LightTheme') {
+        themeWrapper.id = 'DarkTheme';
+        toggleButton.textContent = 'Switch to Light Theme';
+      } else {
+        themeWrapper.id = 'LightTheme';
+        toggleButton.textContent = 'Switch to Dark Theme';
+      }
+    });
+  </script>
+</body>
+</html>

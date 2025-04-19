@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" id="LightTheme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    
+  <div class="nav-bar">Owen's Total News Feed</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="homepage.html">Home</a></li>
+    <li><a href="News.html">News</a></li>
+    <li id="onpage"><a href="About.html">About</a></li>
+    <li><a href="Submit-Tip.html">Submit a Tip</a></li>
+  </ul>
+  <div id="toggle-theme"><button>Switch to Dark Theme</button></div>
+
+
+
+
+
+  <script>
+    const toggleButton = document.getElementById('toggle-theme');
+    const themeWrapper = document.getElementById('LightTheme') || document.getElementById('DarkTheme');
+  
+    toggleButton.addEventListener('click', () => {
+      if (themeWrapper.id === 'LightTheme') {
+        themeWrapper.id = 'DarkTheme';
+        toggleButton.textContent = 'Switch to Light Theme';
+      } else {
+        themeWrapper.id = 'LightTheme';
+        toggleButton.textContent = 'Switch to Dark Theme';
+      }
+    });
+  </script>
+</body>
+</html>
