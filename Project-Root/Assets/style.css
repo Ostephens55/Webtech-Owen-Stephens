@@ -2,22 +2,11 @@ body, ul {
     margin: 0;
   }
 
-  #toggle-theme {button {
-    border: none;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
-    background-color: transparent;
-    color: #ffffff;
-    font-family: 'sans-serif';
-  }}
-  
   .morenewsdiv {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
 
 .morenewsbutton {
   height: 50px;
@@ -45,6 +34,15 @@ body, ul {
     }
   }
 
+  #toggle-theme {button {
+    border: none;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'sans-serif';
+  }}
 
   #LightTheme {
 
@@ -113,6 +111,17 @@ body, ul {
     text-align: center;
   }
 
+  #abouttext {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    background-color: #4b69c1;
+    color: white;
+    height: 200px;
+    width: 75%;
+    padding: 10px;
+  }
+
   p {
     font-size: 20px;
     color: #192a5c;
@@ -130,6 +139,12 @@ body, ul {
     text-align: center;
   }
 
+  h2 {padding: 5px;
+    font-size: 30px;
+    color: #4b69c1;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
 
     /*NEWS PAGE Styles light*/
 
@@ -156,13 +171,13 @@ body, ul {
     }
 
 
-.cant-find {
+/*.cant-find {
   display: grid;
   grid-template-columns: auto;
   padding: 10px;
   margin: 25px;
   background-color: #deeef1;
-}
+}*/
 
 #form-container {
   #form-container {
@@ -171,8 +186,11 @@ body, ul {
     margin-top: 40px;        
   background-color: #4b69c1;
 }
+
 }}
-  
+ 
+
+
     #DarkTheme {
 
       #toggle-theme {
@@ -240,9 +258,19 @@ body, ul {
         text-align: center;
       }
     
+      #abouttext {
+        display: flex;
+        justify-content: center;
+        margin: 10px auto;
+        background-color: #dbf9f8;
+        color: #4b69c1;
+        height: 200px;
+        width: 75%;
+        padding: 10px;
+      }
+
       p {
         font-size: 20px;
-        color: #ffffff;
         font-family: 'Arial', sans-serif;
         font-weight: bold;
         text-align: center;
@@ -256,6 +284,14 @@ body, ul {
         font-weight: bold;
         text-align: center;
       }
+
+      h2 {padding: 5px 20px;
+        font-size: 30px;
+        color: #dbf9f8;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+      }
+
 /*NEWS PAGE Styles DARK*/
 
 .NewsDiv {
