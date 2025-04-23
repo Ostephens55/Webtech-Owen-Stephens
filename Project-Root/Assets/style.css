@@ -35,19 +35,25 @@ body, ul {
   }
 
   #toggle-theme {button {
-    border: none;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
-    background-color: transparent;
-    color: #ffffff;
-    font-family: 'sans-serif';
+      background-color: transparent;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      border: none;
+      font-family: 'Arial', sans-serif;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      color: white;
+      z-index: 2000;
+      font-family: 'sans-serif';
   }}
 
   #LightTheme {
 
     #toggle-theme {
-      position: absolute;
+      position: fixed;
       top: 20px;
       right: 20px;
       border: none;
@@ -56,13 +62,21 @@ body, ul {
       cursor: pointer;
       border-radius: 5px;
       color: white;
+      z-index: 2000;
+      font-family: 'sans-serif';
     }
 
     body {
-      background-color: #ffffff;;
+      background-color: #ffffff;
+      padding-top: 100px;
     }
 
   .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,6 +94,11 @@ body, ul {
     gap: 20px;
     background-color: #dbf9f8;
     padding: 10px;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
   }
   
   .nav-links li a {
@@ -95,6 +114,14 @@ body, ul {
     font-weight: bold;
     color: #dbf9f8;
   }
+
+  #imgworldnews {
+    float: left;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px; /* optional: adds soft corners */
+    margin-top: 10px;}
 
 
   #onpage {
@@ -143,7 +170,7 @@ body, ul {
 
   h2 {padding: 5px;
     font-size: 30px;
-    color: #4b69c1;
+    color: #192a5c;
     font-family: 'Arial', sans-serif;
     text-align: center;
   }
@@ -152,25 +179,59 @@ body, ul {
 
     .NewsDiv {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
       padding: 10px;
-      margin: 25px
+      margin: 25px;
     }
-
-    .NewsDiv > div {
+    
+    .news-card {
       background-color: #deeef1;
-      height: 100px;
-      width: auto;
-      padding: 10px;
-      font-size: 30px;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
-      margin: 10px;
+      transition: transform 0.3s ease;
     }
+    
+    .news-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .news-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    
+    .news-source {
+      font-size: 14px;
+      color: #4b69c1;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    
+    .news-caption {
+      font-size: 15px;
+      color: #192a5c;
+      font-family: 'Arial', sans-serif;
+    }
+    
 
     .NewsDiv > div:hover {
       background-color: #dbf9f8;
       font-weight: bold;
     }
+
+    #readmorebtn{
+  background-color: #4b69c1;
+  color: #dbf9f8;
+  font-size: 10px;
+  padding: 5px 10px;
+  border: none;}
+
 
     .formwrapper {
       display: flex;
@@ -189,6 +250,17 @@ body, ul {
       color: white;
     }
   
+    .site-footer {
+      background-color: #4b69c1;
+      color: #dbf9f8;
+      text-align: center;
+      padding: 20px 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      border-top: 1px solid #192a5c;
+      margin-top: 25px;
+    }
     
 
 }
@@ -199,7 +271,7 @@ body, ul {
     #DarkTheme {
 
       #toggle-theme {
-        position: absolute;
+        position: fixed;
         top: 20px;
         right: 20px;
         border: none;
@@ -208,13 +280,21 @@ body, ul {
         cursor: pointer;
         border-radius: 5px;
         color: white;
+        z-index: 2000;
+        font-family: 'sans-serif';
       }
 
       body {
         background-color: #192a5c;
+        padding-top: 100px;
       }
 
       .nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -232,6 +312,11 @@ body, ul {
         gap: 20px;
         background-color: #4b69c1;
         padding: 10px;
+        position: fixed;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
       }
       
       .nav-links li a {
@@ -341,6 +426,21 @@ body, ul {
   color: black;
 }
 
-    } 
+.site-footer {
+  background-color: #000c30;
+  text-align: center;
+  padding: 20px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #dbf9f8;
+  margin-top: 25px;
+}
+
+  .site-footer p {
+    color: #4b69c1;
+  }
+
+} 
 
 
