@@ -40,17 +40,27 @@ News That's streamlined and category-based for a clear, relevant overview of a r
 </footer>
 
   <script>
-    const toggleButton = document.getElementById('toggle-theme');
+
+const toggleButton = document.getElementById('toggle-theme');
     const themeWrapper = document.getElementById('LightTheme') || document.getElementById('DarkTheme');
-  
+
+    // Check localStorage for the saved theme and apply it
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        themeWrapper.id = savedTheme;
+        toggleButton.textContent = savedTheme === 'LightTheme' ? 'Switch to Dark Theme' : 'Switch to Light Theme';
+    }
+
     toggleButton.addEventListener('click', () => {
-      if (themeWrapper.id === 'LightTheme') {
-        themeWrapper.id = 'DarkTheme';
-        toggleButton.textContent = 'Switch to Light Theme';
-      } else {
-        themeWrapper.id = 'LightTheme';
-        toggleButton.textContent = 'Switch to Dark Theme';
-      }
+        if (themeWrapper.id === 'LightTheme') {
+            themeWrapper.id = 'DarkTheme';
+            toggleButton.textContent = 'Switch to Light Theme';
+            localStorage.setItem('theme', 'DarkTheme'); // Save the theme to localStorage
+        } else {
+            themeWrapper.id = 'LightTheme';
+            toggleButton.textContent = 'Switch to Dark Theme';
+            localStorage.setItem('theme', 'LightTheme'); // Save the theme to localStorage
+        }
     });
   </script>
 </body>
