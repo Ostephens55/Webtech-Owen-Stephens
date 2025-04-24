@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" id="LightTheme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="Assets/style.css">
+    <link rel="icon" href="Owens-Images/OwensLogo.svg" type="image/svg+xml">
+  </head>
+<body>
+    
+  <div class="nav-bar">Owen's Total News Feed</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li id="onpage"><a href="News.html">News</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Submit-Tip.html">Submit a Tip</a></li>
+  </ul>
+  <div id="toggle-theme"><button>Switch to Dark Theme</button></div>
+  <h1>News By Category</h1>
+  <p>Click on a category to explore the latest news!</p>
+
+    <div class="NewsDiv">
+    <div class="news-card"> 
+      <img src="Owens-Images/worldnews.jpg" alt="World News" class="news-image">
+      <h2>World</h2>
+      <p class="news-source">Source: Total News</p>
+      <p class="news-caption">Global events and updates from around the world.</p>
+      <a href="https://totalnews.com/world/" target="_blank">
+        <button id="readmorebtn">Read More</button>
+      </a>
+    </div>
+
+  
+    <div class="news-card">
+      <img src="Owens-Images/Local_News.png" alt="Local News" class="news-image">
+      <h2>Local: MA News</h2>
+      <p class="news-source">Source: Mass Live</p>
+      <p class="news-caption">Stay informed about what’s happening in your area.</p>
+      <a href="https://www.masslive.com/" target="_blank">
+        <button id="readmorebtn">Read More</button>
+      </a>
+    </div>
+  
+    <div class="news-card">
+      <img src="Owens-Images/culture_news.jpg" alt="Culture" class="news-image">
+      <h2>Culture</h2>
+      <p class="news-source">Source: NBC News</p>
+      <p class="news-caption">Stories on art, music, and lifestyle trends.</p>
+      <a href="https://www.nbcnews.com/culture-matters" target="_blank">
+        <button id="readmorebtn">Read More</button>
+      </a>
+    </div>
+  
+    <div class="news-card">
+      <img src="Owens-Images/science.jpg" alt="Science" class="news-image">
+      <h2>Science</h2>
+      <p class="news-source">Source: Springer Nature</p>
+      <p class="news-caption">Explore discoveries and breakthroughs.</p>
+      <a href="https://www.nature.com/news" target="_blank">
+        <button id="readmorebtn">Read More</button>
+      </a>
+    </div>
+  
+    <div class="news-card">
+      <img src="Owens-Images/tech.jpg" alt="Technology" class="news-image">
+      <h2>Technology</h2>
+      <p class="news-source">Source: GeekWire</p>
+      <p class="news-caption">The latest in gadgets, AI, and digital updates.</p>
+      <a href="https://www.geekwire.com/#news-tabs" target="_blank">
+        <button id="readmorebtn">Read More</button>
+      </a>
+    </div>
+  
+    <div class="news-card">
+      <img src="Owens-Images/business.jpg" alt="Business" class="news-image">
+      <h2>Business</h2>
+      <p class="news-source">Source: Total News</p>
+      <p class="news-caption">Economy, markets, and industry insights.</p>
+      <a href="https://totalnews.com/business/#:~:text=BE%20DE%2DESCALATED-,Business%20Trending,-China%20stresses%20%27equality" target="_blank">
+        <button id="readmorebtn">Read More</button>
+      </a>
+    </div>
+  </div>
+  
+    <p>  Can't Find What You're Looking For?
+        <br>Click below to leave a suggestion!</p>
+    <div class="morenewsdiv">
+      <div class="morenewsbutton"><a href="Submit-Tip.html">Click Here</a></div>
+    </div>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Owen's Total News Feed. All rights reserved.</p>
+    </footer>
+
+  <script>
+    const toggleButton = document.getElementById('toggle-theme');
+    const themeWrapper = document.getElementById('LightTheme') || document.getElementById('DarkTheme');
+  
+    toggleButton.addEventListener('click', () => {
+      if (themeWrapper.id === 'LightTheme') {
+        themeWrapper.id = 'DarkTheme';
+        toggleButton.textContent = 'Switch to Light Theme';
+      } else {
+        themeWrapper.id = 'LightTheme';
+        toggleButton.textContent = 'Switch to Dark Theme';
+      }
+    });
+  </script>
+</body>
+</html>

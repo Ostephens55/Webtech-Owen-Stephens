@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" id="LightTheme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="Assets/style.css">
+    <link rel="icon" href="Owens-Images/OwensLogo.svg" type="image/svg+xml">
+</head>
+<body>
+   
+  <div class="nav-bar">Owen's Total News Feed</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="News.html">News</a></li>
+    <li><a href="About.html">About</a></li>
+    <li id="onpage"><a href="Submit-Tip.html">Submit a Tip</a></li>
+  </ul>
+  <div id="toggle-theme"><button>Switch to Dark Theme</button></div>
+
+
+<h1>Submit A Tip or Suggestion Below!</h1>
+<p>We appreciate your feedback</p>
+
+<div class="formwrapper">
+  <div id="form-container">
+    <form id="tipform" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdISt1PybUAhgz_-hFzLL2ZDDWJ1xzE1UXw-Mes0ix8NIFafw/formResponse" method="POST" target="_blank">
+
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="entry.1751304102"><br><br>
+
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="entry.1300094855"><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="entry.1738783365"></textarea><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Owen's Total News Feed. All rights reserved.</p>
+</footer>
+
+<script>
+  const toggleButton = document.getElementById('toggle-theme');
+  const themeWrapper = document.getElementById('LightTheme') || document.getElementById('DarkTheme');
+
+  toggleButton.addEventListener('click', () => {
+    if (themeWrapper.id === 'LightTheme') {
+      themeWrapper.id = 'DarkTheme';
+      toggleButton.textContent = 'Switch to Light Theme';
+    } else {
+      themeWrapper.id = 'LightTheme';
+      toggleButton.textContent = 'Switch to Dark Theme';
+    }
+  });
+
+
+
+
+  <!-- Script to handle background submission -->
+
+  const form = document.getElementById('tipform');
+  const thankYouMessage = document.getElementById('thank-you');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // prevent default form behavior
+
+    const formData = new FormData(form);
+
+    // Submit to Google Forms silently
+    fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSdISt1PybUAhgz_-hFzLL2ZDDWJ1xzE1UXw-Mes0ix8NIFafw/formResponse', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    }).then(() => {
+      // Show thank you message or redirect
+      alert('Thank you for your submission!');
+      form.reset(); // Reset the form after submission
+    });
+  });
+
+</script>
+</body>
+</html>

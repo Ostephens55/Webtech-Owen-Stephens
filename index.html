@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" id="LightTheme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="Assets/style.css">
+    <link rel="icon" href="Owens-Images/OwensLogo.svg" type="image/svg+xml">
+</head>
+<body>
+
+
+        <div class="nav-bar">Owen's Total News Feed</div>
+        <ul class="nav-links" id="navLinks">
+          <li id="onpage"><a href="index.html">Home</a></li>
+          <li><a href="News.html">News</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Submit-Tip.html">Submit a Tip</a></li>
+        </ul>
+        <div id="toggle-theme"><button>Switch to Dark Theme</button></div>
+
+
+<h1 id="featured_stories">Today in the USA</h1>
+<p>Scroll Today's Most Recent News Stories Below!</p>
+<p class="psmall">NYT Subscription Required to Read More</p>
+
+<!-- Elfsight RSS Feed | NYT Todays News -->
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-801ff9d7-b367-4fbf-837f-8bc635d28443" data-elfsight-app-lazy></div>
+
+<h1 id="featured_stories">In Other News</h1>
+<p>Click below to check out Google's News Showcase!</p> 
+
+
+<div class="morenewsdiv">
+<div class="morenewsbutton"><a href="https://news.google.com/showcase?hl=en-US&gl=US&ceid=US%3Aen">Click Here</a></div>
+</div>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Owen's Total News Feed. All rights reserved.</p>
+</footer>
+
+<script>
+    const toggleButton = document.getElementById('toggle-theme');
+    const themeWrapper = document.getElementById('LightTheme') || document.getElementById('DarkTheme');
+  
+    toggleButton.addEventListener('click', () => {
+      if (themeWrapper.id === 'LightTheme') {
+        themeWrapper.id = 'DarkTheme';
+        toggleButton.textContent = 'Switch to Light Theme';
+      } else {
+        themeWrapper.id = 'LightTheme';
+        toggleButton.textContent = 'Switch to Dark Theme';
+      }
+    });
+  </script>
+  
+</body>
+</html>
