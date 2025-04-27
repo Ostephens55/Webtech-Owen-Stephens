@@ -144,9 +144,9 @@ body, ul {
     margin: 10px auto;
     background-color: #4b69c1;
     color: white;
-    height: 200px;
+    height: auto;
     width: 75%;
-    padding: 10px;
+    padding: 20px 10px;
     text-align: center;
     align-items: center;
   }
@@ -362,9 +362,9 @@ body, ul {
         margin: 10px auto;
         background-color: #dbf9f8;
         color: #4b69c1;
-        height: 200px;
+        height: auto;
         width: 75%;
-        padding: 10px;
+        padding: 20px 10px;
         text-align: center;
         align-items: center;
       }
