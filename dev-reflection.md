@@ -1,10 +1,5 @@
 DEV Reflection 
-Submit in VS Code: dev-reflection.md
 
-I developed Owen’s Total News Site.
-
-Dev reflection prompts:
-How did you interpret and implement someone else’s idea?
 
 Owen (PM) gave me a lot of creative freedom. He gave me categories of news to cover, but no specific layout or source of news to choose from. I chose the ones I thought were most relevant to the category, and did not require a subscription. The NYT on the front embedded with RSS DOES actually require a subscription, but I hope that is okay, because it is one of the most popular news sites that I wanted to feature. Having creative freedom for most all visual design made it very fun to create. 
 
